@@ -1,5 +1,7 @@
 {
   "name": "high-low-ionic",
-  "integrations": {},
+  "integrations": {
+    "capacitor": {}
+  },
   "type": "angular"
 }
