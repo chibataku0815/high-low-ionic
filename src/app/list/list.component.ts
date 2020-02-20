@@ -1,5 +1,8 @@
 import { Component, OnInit } from '@angular/core';
 import { Plugins } from '@capacitor/core';
+import { Router } from '@angular/router';
+import { MenuController } from '@ionic/angular';
+
 
 const { Browser } = Plugins;
 
@@ -10,7 +13,7 @@ const { Browser } = Plugins;
 })
 export class ListComponent implements OnInit {
 
-  constructor() { }
+  constructor(private router: Router, private menu: MenuController) { }
 
   ngOnInit() { }
 
@@ -24,16 +27,13 @@ export class ListComponent implements OnInit {
     await Browser.open({ url: 'https://demotrade.highlow.com/Trading' });
   }
 
-  // async openLogin() {
-  //   await Browser.open({ url: 'https://highlow.com/register' });
-  // }
-
-  // async openAccount(item) {
-  //   Browser.open({ url: 'https://highlow.com/register' });
-  // }
-
-  // async openDemo(item) {
-  //   Browser.open({ url: 'https://demotrade.highlow.com/Trading' });
-  // }
+  navHome() {
+    this.router.navigate(['/home']);
+    this.menu.close();
+  }
+  navTokushoho() {
+    this.router.navigate(['/tokushoho']);
+    this.menu.close();
+  }
 
 }

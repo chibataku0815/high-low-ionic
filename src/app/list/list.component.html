@@ -1,6 +1,6 @@
 <ion-list>
-  <ion-list routerLink="/home">
-    <ion-item>
+  <ion-list>
+    <ion-item (click)="navHome()">
       <ion-icon name="home"></ion-icon>
       <ion-label class="ion-margin">ホーム</ion-label>
     </ion-item>
@@ -16,7 +16,7 @@
       <ion-icon name="keypad"></ion-icon>
       <ion-label class="ion-margin">クイックデモ</ion-label>
     </ion-item>
-    <ion-item routerLink="/tokushoho">
+    <ion-item (click)="navTokushoho()">
       <ion-icon name="book"></ion-icon>
       <ion-label class="ion-margin">特定商取引に関する表示</ion-label>
     </ion-item>
