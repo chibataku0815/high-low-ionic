@@ -15,15 +15,25 @@ export class ListComponent implements OnInit {
   ngOnInit() { }
 
   async openLogin() {
-    await Browser.open({ url: 'https://highlow.com/register' });
+    await Browser.open({ url: 'https://highlow.com/login' });
+  }
+  async openAccount() {
+    await Browser.open({ url: 'https://highlow.com/account' });
+  }
+  async openDemo() {
+    await Browser.open({ url: 'https://demotrade.highlow.com/Trading' });
   }
 
-  async openAccount(item) {
-    Browser.open({ url: 'https://highlow.com/register' });
-  }
+  // async openLogin() {
+  //   await Browser.open({ url: 'https://highlow.com/register' });
+  // }
 
-  async openDemo(item) {
-    Browser.open({ url: 'https://demotrade.highlow.com/Trading' });
-  }
+  // async openAccount(item) {
+  //   Browser.open({ url: 'https://highlow.com/register' });
+  // }
+
+  // async openDemo(item) {
+  //   Browser.open({ url: 'https://demotrade.highlow.com/Trading' });
+  // }
 
 }
