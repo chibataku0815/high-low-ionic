@@ -3,6 +3,16 @@
   overflow: hidden;
 }
 
-ion-toolbar {
-  --background: #353535;
+ion-content {
+  --background: url(/assets/images/bg.jpg) top center;
+  background-size: cover;
+}
+
+ion-card {
+  --background: #282828;
+}
+
+ion-card-sub-title {
+  color: white;
+  font-weight: bold;
 }

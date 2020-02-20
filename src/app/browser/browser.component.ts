@@ -24,7 +24,7 @@ export class BrowserComponent implements OnInit {
 
   ngOnInit() { }
 
-  async openPage() {
+  async openLogin() {
     await Browser.open({ url: 'https://highlow.com/register' });
   }
 

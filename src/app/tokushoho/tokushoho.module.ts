@@ -1,10 +1,13 @@
-import { NgModule } from '@angular/core';
+import { NgModule, } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { FormsModule } from '@angular/forms';
 import { IonicModule } from '@ionic/angular';
 import { RouterModule } from '@angular/router';
 
-import { ListPage } from './list.page';
+import { TokushohoPage } from './tokushoho.page';
+
+import { SharedModule } from '../shared/shared.module';
+
 
 @NgModule({
   imports: [
@@ -14,10 +17,12 @@ import { ListPage } from './list.page';
     RouterModule.forChild([
       {
         path: '',
-        component: ListPage
+        component: TokushohoPage
       }
-    ])
+    ]),
+    SharedModule
   ],
-  declarations: [ListPage]
+  declarations: [TokushohoPage]
 })
-export class ListPageModule {}
+export class TokushohoPageModule { }
+
