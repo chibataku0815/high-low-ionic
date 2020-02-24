@@ -1,7 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { Plugins } from '@capacitor/core';
 import { Router } from '@angular/router';
-import { MenuController } from '@ionic/angular';
+import { MenuController, NavController } from '@ionic/angular';
 
 
 const { Browser } = Plugins;
@@ -13,7 +13,7 @@ const { Browser } = Plugins;
 })
 export class ListComponent implements OnInit {
 
-  constructor(private router: Router, private menu: MenuController) { }
+  constructor(public navCtrl: NavController, private router: Router, private menu: MenuController) { }
 
   ngOnInit() { }
 
@@ -28,12 +28,12 @@ export class ListComponent implements OnInit {
   }
 
   navHome() {
-    this.router.navigate(['/home']);
     this.menu.close();
+    this.router.navigate(['/home']);
   }
   navTokushoho() {
-    this.router.navigate(['/tokushoho']);
     this.menu.close();
+    this.router.navigate(['/tokushoho']);
   }
 
 }

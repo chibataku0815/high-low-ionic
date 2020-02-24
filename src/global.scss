@@ -29,6 +29,16 @@
   box-sizing: border-box;
 }
 
+body {
+  background: url(/assets/images/bg.jpg) top center;
+  background-size: cover;
+}
+
+app-root {
+  --background: url(/assets/images/bg.jpg) top center;
+  background-size: cover;
+}
+
 :root {
   --ion-color-primary: #fdba18;
 }

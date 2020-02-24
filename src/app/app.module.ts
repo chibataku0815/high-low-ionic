@@ -16,7 +16,9 @@ import { SharedModule } from './shared/shared.module';
   entryComponents: [],
   imports: [
     BrowserModule,
-    IonicModule.forRoot(),
+    IonicModule.forRoot({
+      animated: false
+    }),
     AppRoutingModule,
     SharedModule
   ],
