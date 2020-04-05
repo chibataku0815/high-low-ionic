@@ -1,22 +1,19 @@
 import { Component, OnInit } from '@angular/core';
-
 import { Plugins } from '@capacitor/core';
+
 const { Browser } = Plugins;
 
 @Component({
   selector: 'app-tokushoho',
   templateUrl: 'tokushoho.page.html',
-  styleUrls: ['tokushoho.page.scss'],
+  styleUrls: ['tokushoho.page.scss']
 })
 export class TokushohoPage implements OnInit {
+  constructor() {}
 
-  constructor() { }
-
-  ngOnInit() {
-  }
+  ngOnInit() {}
   // add back when alpha.4 is out
   async openAccount(item) {
-    Browser.open({ url: 'https://highlow.com/register' });
+    Browser.open({ url: 'https://highlow.com/register?a_aid=5d74a21062504' });
   }
-
 }
