@@ -6,7 +6,7 @@ const { Browser } = Plugins;
 @Component({
   selector: 'app-home',
   templateUrl: 'home.page.html',
-  styleUrls: ['home.page.scss']
+  styleUrls: ['home.page.scss'],
 })
 export class HomePage implements OnInit {
   constructor() {
@@ -17,7 +17,7 @@ export class HomePage implements OnInit {
       console.log('browserPageLoad event called');
     });
     Browser.prefetch({
-      urls: ['https://highlow.com/register?a_aid=5d74a21062504']
+      urls: ['https://highlow.com/register?a_aid=5d74a21062504'],
     });
   }
 
@@ -25,7 +25,7 @@ export class HomePage implements OnInit {
   // add back when alpha.4 is out
   async openAccount() {
     await Browser.open({
-      url: 'https://highlow.com/register?a_aid=5d74a21062504'
+      url: 'https://highlow.com/register?a_aid=5d74a21062504',
     });
   }
 }

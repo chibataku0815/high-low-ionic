@@ -8,13 +8,11 @@ const { Browser } = Plugins;
   styleUrls: ['./browser.component.scss'],
 })
 export class BrowserComponent implements OnInit {
+  constructor() {}
 
-  constructor() { }
-
-  ngOnInit() { }
+  ngOnInit() {}
 
   async openLogin() {
     await Browser.open({ url: 'https://highlow.com/login' });
   }
-
 }

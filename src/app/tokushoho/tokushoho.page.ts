@@ -6,7 +6,7 @@ const { Browser } = Plugins;
 @Component({
   selector: 'app-tokushoho',
   templateUrl: 'tokushoho.page.html',
-  styleUrls: ['tokushoho.page.scss']
+  styleUrls: ['tokushoho.page.scss'],
 })
 export class TokushohoPage implements OnInit {
   constructor() {}

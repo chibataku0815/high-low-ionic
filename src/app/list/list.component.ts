@@ -1,8 +1,7 @@
 import { Component, OnInit } from '@angular/core';
-import { Plugins } from '@capacitor/core';
 import { Router } from '@angular/router';
+import { Plugins } from '@capacitor/core';
 import { MenuController, NavController } from '@ionic/angular';
-
 
 const { Browser } = Plugins;
 
@@ -12,10 +11,13 @@ const { Browser } = Plugins;
   styleUrls: ['./list.component.scss'],
 })
 export class ListComponent implements OnInit {
+  constructor(
+    public navCtrl: NavController,
+    private router: Router,
+    private menu: MenuController
+  ) {}
 
-  constructor(public navCtrl: NavController, private router: Router, private menu: MenuController) { }
-
-  ngOnInit() { }
+  ngOnInit() {}
 
   async openLogin() {
     await Browser.open({ url: 'https://highlow.com/login' });
@@ -35,5 +37,4 @@ export class ListComponent implements OnInit {
     this.menu.close();
     this.router.navigate(['/tokushoho']);
   }
-
 }
